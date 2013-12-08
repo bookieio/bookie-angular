@@ -1,0 +1,23 @@
+<div class="topcoat-navigation-bar">
+  <div class="topcoat-navigation-bar__item quarter">
+  </div>
+  <div class="topcoat-navigation-bar__item center half">
+    <h1 class="topcoat-navigation-bar__title">Bookie</h1>
+  </div>
+  <div class="topcoat-navigation-bar__item right quarter">
+    <a class="topcoat-button" href="" ng-click="add()">+</a>
+  </div>
+</div>
+
+<div class="topcoat-list">
+  <ul class="topcoat-list__container">
+    <li ng-repeat="bookmark in bookmarks" class="topcoat-list__item" ng-click="go(bookmark.hash_id)">
+      <span class="description" ng-bind="bookmark.description"></span>
+      <div class="meta">
+        <span class="user" ng-bind="bookmark.username"></span>
+        &mdash;
+        <span class="hostname" ng-bind="bookmark.hostname"></span>
+      </div>
+    </li>
+  </ul>
+</div>
