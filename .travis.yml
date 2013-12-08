@@ -1,4 +1,12 @@
 language: node_js
 
 node_js:
-  - '0.10.22'
+  - 0.10.22
+
+after_success:
+  - curl -I https://build.phonegap.com/apps/$PHONEGAP_APP_ID/push?auth_token=$PHONEGAP_AUTH_TOKEN
+
+env:
+  global:
+    - PHONEGAP_APP_ID=686597
+    - secure: UEwdcois6hbd9TB4JnPXfZcyNcq7vhWXPZlsRz+Tw8Jw7aLYd2UPTBjYO333KOY4dYe2mW9JzQd9FTufk+vdiwkFWj8CYJO5NO8hT9FlPnFbiiR0l1MD6wzH/mKE9NBtuMPdGPY3hKcRM9spvI5CWl7Ghzm8Qa2LPMNbwIjhxcM=
