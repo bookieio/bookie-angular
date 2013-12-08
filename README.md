@@ -2,17 +2,22 @@
 
 ## Installation
 
-```
-$ git clone https://github.com/bookieio/bookie-angular.git
-$ cd bookie-angular
-$ npm install
-```
+    $ git clone https://github.com/bookieio/bookie-angular.git
+    $ cd bookie-angular
+    $ npm install
 
 ## Development
 
-```
-$ npm install -g grunt-cli
-$ grunt
-```
+    $ npm install -g grunt-cli
+    $ grunt
 
 Go to [http://localhost:9001](http://localhost:9001)
+
+## Phonegap Build
+
+Create an account at [build.phonegap.com](https://build.phonegap.com/).
+
+    $ npm install -g phonegap
+    $ phonegap remote build android
+
+Download the app to your phone from [your account](https://build.phonegap.com/apps).

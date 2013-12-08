@@ -8,11 +8,12 @@
         "grunt-concurrent": "latest",
         "grunt-contrib-coffee": "latest",
         "grunt-contrib-connect": "latest",
+        "grunt-contrib-copy": "latest",
         "grunt-contrib-watch": "latest",
         "phonegap": "latest"
     },
     "scripts": {
-        "prepublish": "node_modules/.bin/grunt build",
+        "prepublish": "node_modules/.bin/grunt setup",
         "test": "node_modules/.bin/grunt test"
     }
 }

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="us.bmark.bookie" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bookie</name>
+    <description>
+        Bookie client written in Angular.js
+    </description>
+    <author email="fitztrev@gmail.com" href="http://trevorfitzgerald.com">
+        Trevor Fitzgerald
+    </author>
+
+    <gap:platform name="android" />
+
+    <preference name="permissions" value="none" />
+    <preference name="phonegap-version" value="3.1.0" />
+
+    <access origin="*" />
+</widget>

@@ -2,16 +2,22 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-concurrent'
-  grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   grunt.registerTask 'default', ['concurrent:dev']
-  grunt.registerTask 'build', ['coffee']
+  grunt.registerTask 'setup', ['copy', 'coffee']
   grunt.registerTask 'lint', ['coffeelint']
   grunt.registerTask 'test', ['coffeelint'] ## todo
 
   grunt.initConfig
+
+    copy:
+      install:
+        src: '.cordova/orig.config.json'
+        dest: '.cordova/config.json'
 
     coffee:
       compile:
