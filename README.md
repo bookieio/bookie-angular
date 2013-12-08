@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bookieio/bookie-angular.png?branch=master)](https://travis-ci.org/fitztrev/laravel-html-minify)
+[![Build Status](https://travis-ci.org/bookieio/bookie-angular.png?branch=master)](https://travis-ci.org/bookieio/bookie-angular)
 
 ## Installation
 
