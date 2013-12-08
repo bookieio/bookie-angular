@@ -8,8 +8,7 @@
 
 ## Development
 
-    $ npm install -g grunt-cli
-    $ grunt
+    $ ./node_modules/.bin/grunt
 
 Go to [http://localhost:9001](http://localhost:9001)
 
@@ -17,7 +16,6 @@ Go to [http://localhost:9001](http://localhost:9001)
 
 Create an account at [build.phonegap.com](https://build.phonegap.com/).
 
-    $ npm install -g phonegap
-    $ phonegap remote build android
+    $ ./node_modules/.bin/phonegap remote build android
 
 Download the app to your phone from [your account](https://build.phonegap.com/apps).
