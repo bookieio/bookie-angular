@@ -19,3 +19,11 @@ Create an account at [build.phonegap.com](https://build.phonegap.com/).
     $ ./node_modules/.bin/phonegap remote build android
 
 Download the app to your phone from [your account](https://build.phonegap.com/apps).
+
+---
+
+## Customizing Phonegap Icons
+
+Use [Phonegap Icon Splash Generator](https://github.com/tlvince/phonegap-icon-splash-generator) to update the application icons.
+
+    $ ./phonegap-icon-splash-generator.sh bookie-logo.svg #ffffff www
