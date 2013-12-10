@@ -30,4 +30,3 @@ notifications:
       - "irc.freenode.net#bookie"
     template:
       - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} %{build_url}"
-      - if [[ "$TRAVIS_BRANCH" == "master" ]]; then "New Phonegap build for v$APP_VERSION.$TRAVIS_BUILD_NUMBER queued: https://build.phonegap.com/apps/$PHONEGAP_APP_ID/share"; fi
