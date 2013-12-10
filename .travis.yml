@@ -5,7 +5,7 @@ node_js:
 
 env:
   global:
-    - APP_VERSION=0.1
+    - APP_VERSION=0.0.1
     - PHONEGAP_APP_ID=686597
     - secure: UEwdcois6hbd9TB4JnPXfZcyNcq7vhWXPZlsRz+Tw8Jw7aLYd2UPTBjYO333KOY4dYe2mW9JzQd9FTufk+vdiwkFWj8CYJO5NO8hT9FlPnFbiiR0l1MD6wzH/mKE9NBtuMPdGPY3hKcRM9spvI5CWl7Ghzm8Qa2LPMNbwIjhxcM=
     - secure: SKLYr7yYCdLHorYCqWFNUZ8Dg1LM3WusEIT29jyy88gLnuRlvVk4jCoeRSl67BbYhRuH/irWlHf9izs3CVK4tRv7OxuGskEDJyIcDilzTzp0Vo10h3UnmNgQ47Iy2KpZBWM2YUP4SnxS9LjULoHSFmMG+6ip+KOFt8WhSGvm1po=
@@ -18,15 +18,6 @@ before_install:
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      curl -X PUT -d "data={\"version\":\"$APP_VERSION.$TRAVIS_BUILD_NUMBER\"}" https://build.phonegap.com/api/v1/apps/$PHONEGAP_APP_ID?auth_token=$PHONEGAP_AUTH_TOKEN;
-    fi
-  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+      curl -X PUT -d "data={\"version\":\"$APP_VERSION+$TRAVIS_BUILD_NUMBER\"}" https://build.phonegap.com/api/v1/apps/$PHONEGAP_APP_ID?auth_token=$PHONEGAP_AUTH_TOKEN;
       bitballoon deploy www --access-token=$BB_ACCESS_TOKEN --site-id=$BB_SITE_ID;
     fi
-
-notifications:
-  irc:
-    channels:
-      - "irc.freenode.net#bookie"
-    template:
-      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message} %{build_url}"
