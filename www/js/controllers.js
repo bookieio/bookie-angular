@@ -12,7 +12,7 @@
     '$scope', '$rootScope', '$window', '$location', function($scope, $rootScope, $window, $location) {
       return $rootScope.go = function(hash_id) {
         var ref;
-        ref = window.open("" + bookieUrl + "/redirect/" + hash_id, "_blank", "location=yes");
+        ref = window.open("" + bookieUrl + "/redirect/" + hash_id, "_system");
       };
     }
   ]);

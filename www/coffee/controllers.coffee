@@ -12,8 +12,7 @@ bookieControllers.controller 'MainController', [
     $rootScope.go = (hash_id) ->
       ref = window.open(
         "#{bookieUrl}/redirect/#{hash_id}"
-        "_blank"
-        "location=yes"
+        "_system"
       )
       return
 ]
