@@ -15,5 +15,5 @@ bookieApp.config ['$routeProvider', ($routeProvider) ->
     .otherwise({
       redirectTo: '/'
     })
-    return
+  return
 ]
