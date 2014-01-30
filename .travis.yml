@@ -11,13 +11,7 @@ env:
     - secure: SKLYr7yYCdLHorYCqWFNUZ8Dg1LM3WusEIT29jyy88gLnuRlvVk4jCoeRSl67BbYhRuH/irWlHf9izs3CVK4tRv7OxuGskEDJyIcDilzTzp0Vo10h3UnmNgQ47Iy2KpZBWM2YUP4SnxS9LjULoHSFmMG+6ip+KOFt8WhSGvm1po=
     - secure: h367ewGkzarAa4QXjKgPpynCmifTazp7kqlnuTlz5tZwg5uiyLlX0N7b4LKtBUbD7kxbfXs9EGatJf4y+CSJNxlki8QPhmImQqxt+x5VJPqg7f7+Qd4REgA+YA9HdD1zu2KNoggq8mdT/rpZPLVEJpHKzy4CjC6ifRp+XPQ/2NU=
 
-before_install:
-  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      travis_retry gem install bitballoon;
-    fi
-
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
       curl -X PUT -d "data={\"version\":\"$APP_VERSION+$TRAVIS_BUILD_NUMBER\"}" https://build.phonegap.com/api/v1/apps/$PHONEGAP_APP_ID?auth_token=$PHONEGAP_AUTH_TOKEN;
-      bitballoon deploy www --access-token=$BB_ACCESS_TOKEN --site-id=$BB_SITE_ID;
     fi
