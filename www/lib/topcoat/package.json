@@ -10,7 +10,7 @@
   "dependencies": {
     "topcoat-radio-button-base": "~0.1.1",
     "topcoat-button-base": "~0.6.1",
-    "topcoat-radio-button": "~0.2.0",
+    "topcoat-radio-button": "~0.3.1",
     "topcoat-navigation-bar-base": "~0.5.0",
     "topcoat-navigation-bar": "~0.5.0",
     "topcoat-input-base": "~0.4.1",
